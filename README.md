@@ -31,25 +31,35 @@ It is designed to **solve DKMS build errors**, **kernel mismatch issues**, and *
 2. Detects running kernel version  
 3. Installs required dependencies  
 4. Removes old/conflicting DKMS modules  
-5. Clones the official **morrownr 8821au driver repo**  
-6. Runs `install-driver.sh` (DKMS setup)  
+5. Clones the official **morrownr 8821au driver repository**  
+6. Runs `install-driver.sh` (DKMS based installation)  
 7. Loads the `8821au` kernel module  
 
 ---
 
 ## 📦 Requirements
 
-- Kali Linux
-- Internet connection
-- Supported USB WiFi adapter
+- Kali Linux (Rolling recommended)
+- Working internet connection
+- Supported USB WiFi adapter (RTL8821AU chipset)
 - Kernel headers available
 
 ---
 
-## 🛠 Installation
+## 🛠 Installation (Step-by-Step)
 
-### Step 1: Clone the repository
+### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/YOUR_USERNAME/Realtek-8821AU-Kali-Auto-Installer.git
+Step 2: Enter the Directory
 cd Realtek-8821AU-Kali-Auto-Installer
-Step 2: Make script executable
+Step 3: Make Script Executable
+chmod +x install_8821au.sh
+Step 4: Run the Installer
+sudo ./install_8821au.sh
+✅ Verify Installation
+Check if Driver is Loaded
+lsmod | grep 8821au
+Check Wireless Interface
+iwconfig
+
