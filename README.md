@@ -51,15 +51,14 @@ It is designed to **solve DKMS build errors**, **kernel mismatch issues**, and *
 ### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/YOUR_USERNAME/Realtek-8821AU-Kali-Auto-Installer.git
+
 Step 2: Enter the Directory
 cd Realtek-8821AU-Kali-Auto-Installer
+
 Step 3: Make Script Executable
 chmod +x install_8821au.sh
+
 Step 4: Run the Installer
 sudo ./install_8821au.sh
-✅ Verify Installation
-Check if Driver is Loaded
-lsmod | grep 8821au
-Check Wireless Interface
-iwconfig
+
 
